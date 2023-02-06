@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getApiRawg } from "./api.js";
+import { getApiGames} from "./api.js";
 
 import PropTypes from 'prop-types';
 
@@ -117,7 +117,7 @@ const propTypes = {
 	}
 
 	componentDidMount() {
-		getApiRawg()
+		getApiGames()
 			.then((response) => {
 				//console.log(response);
 				this.setState(
@@ -133,14 +133,14 @@ const propTypes = {
 
 			console.log(apiGames);
 
-			const apiRawgList = apiGames.results.map((item) => {
+			const apiGamesList = apiGames.results.map((item) => {
 				return <div key={item.id}>{item.name}</div>;
 			});
 
 			return (
 				<div>
 					<p>Lista gier:</p>
-					{apiRawgList}
+					{apiGamesList}
 				</div>
 			);
 		}
