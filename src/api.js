@@ -8,3 +8,4 @@ const API_GAMES_URL = baseURL + KEY_URL + queryParameters;
 export function getApiGames() {
 	return axios.get(API_GAMES_URL);
 }
+//console.log(API_GAMES_URL)
